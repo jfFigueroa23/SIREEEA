@@ -1,0 +1,51 @@
+.header {
+    background-color: #1E2440;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+a, p {
+    font-weight: 500;
+    font-size: 20px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+p{
+    margin-left: 1vw;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+img {
+    max-width: 7vw;
+    max-height: 7vh;
+
+    border-radius: 50%;
+}
+
+.logout {
+
+    color: #ffffff;
+    background-color: #363A6B;
+    padding: 0.6vw 1.4vw 0.6vw 1.4vw;
+    border-radius: 50%;
+    border: none;
+    font-size: 27px;
+
+}
+
+.logout:hover {
+
+    background-color: #6074CC;
+
+}

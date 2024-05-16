@@ -1,0 +1,75 @@
+<app-header></app-header>
+<div class="profesores">
+    <div class="filtro">
+      <h2>Filtro</h2>
+        <div class="tema">
+          <!-- para filtrar -->
+          <select (change)="onCarreraSelectionChange()">
+            <option value="todos" disabled selected>Selecciona una carrera</option>
+            <option *ngFor="let carrera of carreras" [value]="carrera">{{ carrera }}</option>
+          </select>
+          <select (change)="filtrarGrupos($event)">
+            <option value="todos">Todos los grupos</option>
+            <option *ngFor="let grupo of grupos" [value]="grupo.grupo" (click)="filtrarGrupos({ target: { value: grupo.grupo } })" >
+              Grupo {{ grupo.grupo }}
+            </option>
+          </select>
+        </div>  
+    </div>
+    <div class="descargas">
+      <h2>Descargar archivos</h2>
+        <div class="excel">
+            <img src="../../assets/images/excel.png" alt="">
+        </div>
+        <div class="pdf">
+            <img src="../../assets/images/pdf.png" alt="">
+        </div>
+    </div>
+    <div class="resultado">
+      <div class="tabla">
+          <table>
+              <thead>
+                  <tr>
+                      <th>N° de Cuenta</th>
+                      <th>Nombre</th>
+                      <th>Grupo</th>
+                      <th>Detalles</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let alumno of alumnosFiltrados">
+                      <td>{{ alumno.nro_cuenta }}</td>
+                      <td>{{ getNombreCompleto(alumno) }}</td>
+                      <td>{{ alumno.grupo }}</td>
+                      <td>
+                          <!-- Agregamos un botón para ver detalles -->
+                          <button (click)="verDetalles(alumno)">Ver Detalles</button>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div> 
+    <div class="estrategias">
+      <h2>Recomendaciones</h2>
+      <br>
+      <h4 *ngIf="alumnoSeleccionado && !grupoSeleccionado">{{ 'Nombre Alumno: ' + nombreAlumno }}</h4>
+      <h4 *ngIf="!alumnoSeleccionado && grupoSeleccionado">{{ 'Grupo: ' + grupoSeleccionado }}</h4>
+      <h4 *ngIf="alumnoSeleccionado && grupoSeleccionado">{{ 'Nombre Alumno: ' + nombreAlumno }}</h4>
+      <p class="erecomendada">Estrategias de enseñanza recomendadas: </p>
+      <p class="pe1">{{ tituloEE1 }} ({{ conteoEE1 }})</p>
+      <p class="pe2">{{ tituloEE2 }} ({{ conteoEE1 }})</p>
+      <p class="pe3">{{ tituloEE3 }} ({{ conteoEE1 }})</p>
+      <p class="pe4">{{ tituloEE4 }} ({{ conteoEE1 }})</p>
+      <div class="de1"><p>{{ descripcionEE1 }}</p></div>
+      <div class="de2"><p>{{ descripcionEE2 }}</p></div>
+      <div class="de3"><p>{{ descripcionEE3 }}</p></div>
+      <div class="de4"><p>{{ descripcionEE4 }}</p></div>
+    </div>    
+    <!--
+  <div class="encuestas">
+    <a href="https://forms.gle/2YeNiWerhAL91BPg8" class="b_encuesta">Evaluar Test SUMI</a>
+    <a href="https://forms.gle/FnfSoPa8KrWxyATp7" class="b_encuesta">Evaluar Test USABILIDAD</a>
+  </div>-->
+
+</div>

@@ -1,0 +1,11 @@
+<div class="header" >
+
+    <div class="logo" (click)="navigateInicio()">
+        <img src="../assets/unnamed.png">
+        <p> Software de Detección de Estilos de Aprendizaje </p>
+    </div>
+
+    <button class="logout" (click)="logout()" *ngIf="loggedin()"> <i class="fa-solid fa-right-from-bracket "></i> </button>
+</div>
+
+<router-outlet></router-outlet>

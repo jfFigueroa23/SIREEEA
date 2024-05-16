@@ -1,0 +1,24 @@
+<!-- Asegúrate de que tu formulario tenga un identificador utilizando la directiva ngForm -->
+<form #miFormulario="ngForm" (ngSubmit)="registrarRespuestas()">
+    <div *ngFor="let pregunta of Cuestionario; let i = index" class="container themed-container">
+      <h4> {{ pregunta.num_pregunta }} .-  {{ pregunta.pregunta }} </h4>
+      <div>
+        <label class="respuestas">
+          <input type="radio" name="{{ pregunta.num_pregunta }}" id="{{ pregunta.num_pregunta }}-A" class="radio_input" [(ngModel)]="pregunta.respuesta" value="A" [required]="true">
+          <div class="radio_radio"></div>
+          {{pregunta.respuesta_1}} 
+        </label>
+        <label class="respuestas"> 
+          <input type="radio" name="{{ pregunta.num_pregunta }}" id="{{ pregunta.num_pregunta }}-B" class="radio_input" [(ngModel)]="pregunta.respuesta" value="B" [required]="true">
+          <div class="radio_radio"></div>
+          {{pregunta.respuesta_2}} 
+        </label>
+      </div>
+    </div>
+  
+    <div class="container boton">
+      <!-- Cambia el tipo de botón a "submit" y agrega el atributo form con el valor del identificador del formulario -->
+      <button type="submit" class="btn btn-primary" [disabled]="!miFormulario.valid">Registrar respuestas</button>
+    </div>
+  </form>
+  

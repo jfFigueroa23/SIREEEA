@@ -1,0 +1,44 @@
+{
+  "name": "sree-front",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^16.0.4",
+    "@angular/common": "^16.0.4",
+    "@angular/compiler": "^16.0.4",
+    "@angular/core": "^16.0.4",
+    "@angular/forms": "^16.0.4",
+    "@angular/platform-browser": "^16.0.4",
+    "@angular/platform-browser-dynamic": "^16.0.4",
+    "@angular/router": "^16.0.4",
+    "@swimlane/ngx-datatable": "^20.1.0",
+    "autoprefixer": "^10.4.16",
+    "flowbite": "^1.8.1",
+    "postcss": "^8.4.31",
+    "rxjs": "~7.8.0",
+    "sweetalert2": "^11.10.4",
+    "tailwindcss": "^3.3.5",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.13.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^16.0.4",
+    "@angular/cli": "~16.0.4",
+    "@angular/compiler-cli": "^16.0.4",
+    "@types/jasmine": "~4.3.0",
+    "jasmine-core": "~4.5.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "typescript": "~4.9.4"
+  }
+}

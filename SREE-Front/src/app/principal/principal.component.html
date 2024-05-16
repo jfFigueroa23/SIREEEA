@@ -1,0 +1,75 @@
+<app-header></app-header>
+
+<div class="container mx-auto">
+  <div class="m-4 p-2 border">
+    <p class="text-xl sm:text-lg md:text-sm xl:text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Aut numquam dolores temporibus, labore distinctio perferendis iure. Nobis et debitis odit quaerat, cum fugiat porro
+       impedit eum ea animi iure officiis.</p>
+  </div>
+</div>
+
+<button id="dropdownUsersButton" data-dropdown-toggle="dropdownUsers" data-dropdown-placement="bottom" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Grupos <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+  </svg></button>
+<!-- Dropdown menu -->
+<div id="dropdownUsers" class="z-10 hidden bg-white rounded-lg shadow w-60 dark:bg-gray-700">
+  <ul class="h-48 py-2 overflow-y-auto text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUsersButton">
+    <li>
+      <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+        Jese Leos
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="tema">
+    <!-- para filtrar -->
+    <select (change)="onCarreraSelectionChange()">
+      <option value="todos" disabled selected>Selecciona una carrera</option>
+      <option *ngFor="let carrera of carreras" [value]="carrera">{{ carrera }}</option>
+    </select>
+    <select (change)="filtrarGrupos($event)">
+      <option value="todos">Todos los grupos</option>
+      <option *ngFor="let grupo of grupos" [value]="grupo.grupo" (click)="filtrarGrupos({ target: { value: grupo.grupo } })">
+        Grupo {{ grupo.grupo }}
+      </option>
+    </select>
+  </div>  
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Cuenta
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Nombre
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Grupo
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Estilo de Aprendizaje
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" *ngFor="let alumno of alumnosFiltrados">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {{ alumno.nro_cuenta }}
+                </th>
+                <td class="px-6 py-4">
+                    {{ getNombreCompleto(alumno) }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ alumno.grupo }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ alumno.estrategia_aprendizaje }} 
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

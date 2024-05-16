@@ -1,0 +1,36 @@
+<div class="main">
+
+    <div class="info">
+    </div>
+
+    <form [formGroup]="login_form" (keydown)="onKeydown($event)">
+
+        <div class="login">
+
+            <h2> Iniciar Sesión </h2>
+
+            <div class="icons">
+                <button class="btn" [ngClass]="{selected: activeClass}" (click)="navigateTo('estudiante')">
+                    <i class="fa-solid fa-user fa-lg"></i>
+                    <p>Estudiante</p>
+                </button>
+                <button class="btn" [ngClass]="{selected: !activeClass}" (click)="navigateTo('profesor')">
+                    <i class="fa-solid fa-chalkboard-user fa-lg"></i>
+                    <p>Profesor</p>
+                </button>
+            </div>
+
+            <div class="inputs">
+                <input placeholder="Numero de cuenta" type="text" name="" id="user" formControlName = "nro_cuenta">
+            </div>
+            
+            <div class="inputs pass">
+                <input placeholder="Contraseña" type="password" name="" id="pass" formControlName = "password" >
+            </div>
+
+            <button type="button" class="login_btn" (click)="sendLogin()">
+                LOGIN
+            </button>
+        </div>
+    </form>
+</div>

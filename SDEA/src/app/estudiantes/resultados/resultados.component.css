@@ -1,0 +1,155 @@
+.main{
+    display: grid;
+    grid-template-columns: 40% 1fr;
+}
+
+.table_flex {
+
+    margin: 15px 2% 0 0;
+
+}
+
+.text {
+
+    background-color: #1E2440;
+    color: #ffffff;
+
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 1rem 1rem 0 0;
+    margin-bottom: 0.2rem;
+
+}
+
+.statistics{
+    padding: 1vh;
+    background-color: #1E2440;
+    margin: 20px 5%;
+    border-radius: 1rem;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.info_grafic{
+    background-color: #ffffff;
+    border: 1px solid #6074CC;
+    padding: 1rem;
+    margin: 0 3% 10px 3%;
+    border-radius: 1rem;
+    font-weight: 500;
+}
+
+.info_table {
+    background-color: #ffffff;
+    border: 1px solid #6074CC;
+
+    font-size: 15px !important;
+}
+
+.profile_text {
+
+    margin-top: 0.5rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.profile_info {
+
+    padding: 1rem;
+    background-color: #1E2440;
+    color: #ffffff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-bottom: 1px solid #ffffff;
+}
+
+.profile_info p {
+
+    margin-bottom: 0;
+    margin-top: 10px;
+
+    color: #C8C8C9;
+    text-align: justify;
+
+}
+
+.profile_text h3, h5 {
+    margin: 0;
+}
+
+.tap {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+    margin: 10px 3%;
+}
+
+.tap p {
+    background-color: #363A6B;
+    padding: 0 6.5vw 0 6.5vw;
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.tap button {
+    border: 0;
+    color: #ffffff;
+}
+
+.tap p:hover {
+    background-color: #1E2440;
+}
+
+.active {
+    background-color: #6074CC !important;
+}
+
+.activePreview {
+    opacity: 0;
+    display: none;
+}
+
+.button{
+    margin-left: auto; 
+    margin-right: 0;
+    margin-top: 10px;
+
+}
+
+.encuestas{
+    display: inline-flex;
+    position: absolute;
+    top: 850px;
+    height: 111px;
+    padding: 33px 63px 33px 43px;
+    align-items: flex-start;
+    gap: 67px;
+    flex-shrink: 0;
+  }
+
+  .b_encuesta{
+    right: 0;
+    background-color: #6074CC;
+    border-radius: 1rem;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .b_encuesta:hover{
+    background-color: #1E2440;
+  }
