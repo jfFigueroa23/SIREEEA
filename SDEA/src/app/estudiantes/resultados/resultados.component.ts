@@ -58,7 +58,7 @@ export class ResultadosComponent implements OnInit {
                     display: false
                 },
                 suggestedMin: 0,
-                suggestedMax: 10
+                suggestedMax: 5
             }
         }
       } 

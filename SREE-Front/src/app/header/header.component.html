@@ -1,12 +1,12 @@
 <header class="header">
     <a class="flex items-center logo">
         <img src="../../assets/images/logo-sree paint.png" alt="SREE" class="h-10 mr-3 rounded-full">
-        <p class="text-white text-lg font-semibold">Sistema de Recomendación de Estrategias de Enseñanza</p>
+        <p class="text-white text-lg font-semibold">Recommendation System for Teaching Strategies according to Learning Styles</p>
     </a>
     <nav class="mt-4 md:mt-0">
         <div *ngIf="nombreProfesor" class="text-white">
-            <span>Bienvenido, {{ nombreProfesor }}</span>
-            <a href="#" class="nav-link ml-4" (click)="cerrarSesion()">Cerrar Sesión</a>
+            <span>Welcome, {{ nombreProfesor }}</span>
+            <a href="#" class="nav-link ml-4" (click)="cerrarSesion()">Sign off</a>
         </div>
     </nav>
 </header>

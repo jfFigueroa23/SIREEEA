@@ -1,23 +1,23 @@
 <app-header></app-header>
 <div class="profesores">
     <div class="filtro">
-      <h2>Filtro</h2>
+      <h2>Filters</h2>
         <div class="tema">
           <!-- para filtrar -->
           <select (change)="onCarreraSelectionChange()">
-            <option value="todos" disabled selected>Selecciona una carrera</option>
+            <option value="todos" disabled selected>Select a career</option>
             <option *ngFor="let carrera of carreras" [value]="carrera">{{ carrera }}</option>
           </select>
           <select (change)="filtrarGrupos($event)">
-            <option value="todos">Todos los grupos</option>
+            <option value="todos">All the groups</option>
             <option *ngFor="let grupo of grupos" [value]="grupo.grupo" (click)="filtrarGrupos({ target: { value: grupo.grupo } })" >
-              Grupo {{ grupo.grupo }}
+              Group {{ grupo.grupo }}
             </option>
           </select>
         </div>  
     </div>
     <div class="descargas">
-      <h2>Descargar archivos</h2>
+      <h2>Download files</h2>
         <div class="excel">
             <img src="../../assets/images/excel.png" alt="">
         </div>
@@ -30,10 +30,10 @@
           <table>
               <thead>
                   <tr>
-                      <th>N° de Cuenta</th>
-                      <th>Nombre</th>
-                      <th>Grupo</th>
-                      <th>Detalles</th>
+                      <th>Account No.</th>
+                      <th>Name</th>
+                      <th>Group</th>
+                      <th>Details</th>
                   </tr>
               </thead>
               <tbody>
@@ -43,7 +43,7 @@
                       <td>{{ alumno.grupo }}</td>
                       <td>
                           <!-- Agregamos un botón para ver detalles -->
-                          <button (click)="verDetalles(alumno)">Ver Detalles</button>
+                          <button (click)="verDetalles(alumno)">See details</button>
                       </td>
                   </tr>
               </tbody>
@@ -51,12 +51,12 @@
       </div>
   </div> 
     <div class="estrategias">
-      <h2>Recomendaciones</h2>
+      <h2>Recommendations</h2>
       <br>
-      <h4 *ngIf="alumnoSeleccionado && !grupoSeleccionado">{{ 'Nombre Alumno: ' + nombreAlumno }}</h4>
-      <h4 *ngIf="!alumnoSeleccionado && grupoSeleccionado">{{ 'Grupo: ' + grupoSeleccionado }}</h4>
-      <h4 *ngIf="alumnoSeleccionado && grupoSeleccionado">{{ 'Nombre Alumno: ' + nombreAlumno }}</h4>
-      <p class="erecomendada">Estrategias de enseñanza recomendadas: </p>
+      <h3 *ngIf="alumnoSeleccionado && !grupoSeleccionado">{{ 'Student\'s name: ' + nombreAlumno }}</h3>
+      <h3 *ngIf="!alumnoSeleccionado && grupoSeleccionado">{{ 'Group: ' + grupoSeleccionado }}</h3>
+      <h3 *ngIf="alumnoSeleccionado && grupoSeleccionado">{{ 'Student\'s name: ' + nombreAlumno }}</h3>
+      <p class="erecomendada">Recommended teaching strategies: </p>
       <p class="pe1">{{ tituloEE1 }} ({{ conteoEE1 }})</p>
       <p class="pe2">{{ tituloEE2 }} ({{ conteoEE1 }})</p>
       <p class="pe3">{{ tituloEE3 }} ({{ conteoEE1 }})</p>

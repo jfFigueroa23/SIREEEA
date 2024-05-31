@@ -2,28 +2,28 @@
 
     <div class="encuestas">
         <div class="title">
-            <p>Encuentas asignadas por el profesor</p>
+            <p>Teacher Assigned Surveys</p>
         </div>
 
         <div class="encuesta" *ngFor="let Lista of Listas" (click) = "OnClick(Lista.descripcion)">
             <p class="sub_title"> {{Lista.titulo}} </p>
             <div class="content">
-                <p class="text"> Profesor:  </p>
+                <p class="text"> Teacher:  </p>
                 <p class="text"> Francisco Figueroa </p>
             </div>
             <div class="content" >
-                <p class="text"> Estado:  </p>
-                <p class="text" style="color: #7BFF81;" *ngIf="checkStatus( )"> Finalizada </p>
-                <p class="text" style="color: #FF7373;" *ngIf="!checkStatus( )"> No Finalizada </p>
+                <p class="text"> State:  </p>
+                <p class="text" style="color: #7BFF81;" *ngIf="checkStatus( )"> Finished </p>
+                <p class="text" style="color: #FF7373;" *ngIf="!checkStatus( )"> Not Finished </p>
             </div>
             <div class="button" (click)="realizarEncuesta( Lista.id_cuestionario )">
-                <button class="b_encuesta" *ngIf="checkStatus( )"> Realizar nuevamente </button>
-                <button class="b_encuesta" *ngIf="!checkStatus( )"> Comenzar encuesta </button>
+                <button class="b_encuesta" *ngIf="checkStatus( )"> Start survey again </button>
+                <button class="b_encuesta" *ngIf="!checkStatus( )"> Start survey </button>
             </div>
         </div>
 
         <div class="footer">
-            <p class="text">Número de encuestas puede variar dependiendo del profesor o profesores asignados al alumno</p>
+            <p class="text">Number of surveys may vary depending on the teacher or teachers assigned to the student.</p>
         </div>
     </div>
 
@@ -31,7 +31,7 @@
 
         <div class="Description">
             <div class="title">
-                <p>Descripción de la encuesta </p>
+                <p>Survey Description </p>
             </div>
             <div class="des_info">
                 <p class="text"> {{ Description }} </p>
@@ -40,15 +40,15 @@
 
         <div class="statistics">
             <div class="title">
-                <p>Estadísticas de la encuesta</p>
+                <p>Survey Statistics</p>
             </div>
             <div class="tap">
-                <button (click)="cambiasGrafica($event)"> <p id="Grafica" class="active" > Gráfica </p> </button>
-                <button (click)="cambiasTabla($event)"> <p id="Tabla" > Tabla </p> </button>
+                <button (click)="cambiasGrafica($event)"> <p id="Grafica" class="active" > Graph </p> </button>
+                <button (click)="cambiasTabla($event)"> <p id="Tabla" > Table </p> </button>
             </div>
-
-            <div class="info_grafic">
-                <canvas id="MyChart" class=""> {{ chart }} </canvas>
+<!--   -->
+            <div class="info_grafic" style="height: 500px;" >
+                 <canvas id="MyChart" class=""> {{ chart }} </canvas> 
             </div>
             <div class="info_table activePreview">
                 <table class="table table-hover">
@@ -73,7 +73,7 @@
                     <tbody class="">
                       <tr>
         
-                        <th scope="row"> Activo </th>
+                        <th scope="row"> Active </th>
                         <td id="a11"></td>
                         <td id="a9"></td>
                         <td id="a7"></td>
@@ -86,12 +86,12 @@
                         <td id="r7"></td>
                         <td id="r9"></td>
                         <td id="r11"></td>
-                        <th scope="row"> Reflexivo </th>
+                        <th scope="row"> Thoughtful </th>
         
                       </tr>
                       <tr>
         
-                        <th scope="row"> Sensorial </th>
+                        <th scope="row"> Sensory </th>
                         <td id="s11"></td>
                         <td id="s9"></td>
                         <td id="s7"></td>
@@ -104,7 +104,7 @@
                         <td id="i7"></td>
                         <td id="i9"></td>
                         <td id="i11"></td>
-                        <th scope="row"> Intuitivo </th>
+                        <th scope="row"> Intuitive </th>
         
                       </tr>
                       <tr>
@@ -127,7 +127,7 @@
                       </tr>
                       <tr>
         
-                        <th scope="row"> Secuencial </th>
+                        <th scope="row"> Sequential </th>
                         <td id="se11"></td>
                         <td id="se9"></td>
                         <td id="se7"></td>

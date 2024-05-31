@@ -2,15 +2,15 @@
 
     <div class="statistics">
         <div class="title">
-            <p class="text-center"> Resultado de la encuesta </p>
+            <p class="text-center"> Survey result </p>
         </div>
         <div class="tap">
-          <button (click)="cambiasGrafica($event)"> <p id="Grafica" class="active" > Gráfica </p> </button>
-          <button (click)="cambiasTabla($event)"> <p id="Tabla" > Tabla </p> </button>
+          <button (click)="cambiasGrafica($event)"> <p id="Grafica" class="active" > Graph </p> </button>
+          <button (click)="cambiasTabla($event)"> <p id="Tabla" > Table </p> </button>
       </div>
 
-      <div class="info_grafic">
-          <canvas id="MyChart" class=""> {{ chart }} </canvas>
+      <div class="info_grafic" style="position: relative; height:40vh; width:80vw">
+          <!-- <canvas id="MyChart"  class=""> {{ chart }} </canvas> -->
       </div>
       <div class="info_table activePreview">
           <table class="table table-hover">
@@ -37,7 +37,7 @@
               <tbody class="">
                 <tr>
   
-                  <th scope="row"> Activo </th>
+                  <th scope="row"> Active </th>
                   <td id="a11"></td>
                   <td id="a9"></td>
                   <td id="a7"></td>
@@ -50,12 +50,12 @@
                   <td id="r7"></td>
                   <td id="r9"></td>
                   <td id="r11"></td>
-                  <th scope="row"> Reflexivo </th>
+                  <th scope="row"> Thoughtful </th>
   
                 </tr>
                 <tr>
   
-                  <th scope="row"> Sensorial </th>
+                  <th scope="row"> Sensory </th>
                   <td id="s11"></td>
                   <td id="s9"></td>
                   <td id="s7"></td>
@@ -68,7 +68,7 @@
                   <td id="i7"></td>
                   <td id="i9"></td>
                   <td id="i11"></td>
-                  <th scope="row"> Intuitivo </th>
+                  <th scope="row"> Intuitive </th>
   
                 </tr>
                 <tr>
@@ -91,7 +91,7 @@
                 </tr>
                 <tr>
   
-                  <th scope="row"> Secuencial </th>
+                  <th scope="row"> Sequential </th>
                   <td id="se11"></td>
                   <td id="se9"></td>
                   <td id="se7"></td>
@@ -114,11 +114,11 @@
     </div>
         
     <div class="profile table_flex">
-      <h2 class="text text-center"> Hoja de perfil </h2>
+      <h2 class="text text-center"> Profile sheet </h2>
 
       <div class="profile_info">
         <div class="profile_text">
-          <h5> ¿Cómo adquiere la información? </h5>
+          <h5> How do you acquire the information? </h5>
           <h3 id="Estilo1"></h3>
         </div>
 
@@ -127,7 +127,7 @@
       </div>
       <div class="profile_info">
         <div class="profile_text">
-          <h5> ¿Cómo precibe la información? </h5>
+          <h5> How do you perceive the information? </h5>
           <h3 id="Estilo2"></h3>
         </div>
 
@@ -137,7 +137,7 @@
       <div class="profile_info">
 
         <div class="profile_text">
-          <h5> ¿Por que vía prefiere recibir la información? </h5>
+          <h5> By what means do you prefer to receive information? </h5>
           <h3 id="Estilo3"></h3>
         </div>
 
@@ -147,7 +147,7 @@
       <div class="profile_info">
 
         <div class="profile_text">
-          <h5> ¿Cómo se le facilita el contenido? </h5>
+          <h5> How is the content provided to you? </h5>
           <h3 id="Estilo4"></h3>
         </div>
 

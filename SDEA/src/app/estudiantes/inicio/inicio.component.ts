@@ -26,7 +26,7 @@ export class InicioComponent implements OnInit, AfterViewInit {
   global: number = 0;
 
   constructor( private servicio: AlumnoService, private route: Router ) {
-    this.Description = 'Seleccione una encuesta para ver la descripción';
+    this.Description = 'Select a survey to see the description';
   }
 
   OnClick(Des: any){
@@ -38,10 +38,10 @@ export class InicioComponent implements OnInit, AfterViewInit {
     this.chart = new Chart("MyChart", {
       type: 'radar',
       data: {
-        labels: ['Activo', 'Sensorial', 'Visual', 'Secuencial', 'Reflexivo', 'Intuitivo', 'Verbal', 'Global'],
+        labels: ['Active', 'Sensory', 'Visual', 'Sequential', 'Thoughtful', 'Intuitive', 'Verbal', 'Global'],
         datasets: [
           {
-            label: 'Tu Perfil',
+            label: 'Your profile',
             data: [],
             backgroundColor: 'rgba(46, 155, 236, 0.5)',
             borderColor: 'rgba(30, 36, 64, 0.6)',
@@ -51,6 +51,8 @@ export class InicioComponent implements OnInit, AfterViewInit {
         ]
       },
       options: {
+        responsive: true,
+        aspectRatio:1.6,
         scales: {
             r: {
                 angleLines: {

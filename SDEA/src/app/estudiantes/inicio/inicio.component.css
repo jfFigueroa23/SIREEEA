@@ -108,7 +108,8 @@
     padding: 1rem;
     margin: 0 3% 10px 3%;
     border-radius: 1rem;
-    font-weight: 500;
+     /* font-weight: 500; */ 
+     height: 300px;
 }
 
 .info_table {
