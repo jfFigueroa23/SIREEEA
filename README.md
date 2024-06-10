@@ -1,12 +1,12 @@
 Collaborators and developers:
 - Juan Francisco Figueroa Pérez: Project lead researcher
-- Manuel de Jesus Rodriguez Guerrero: Associate Researcher
-- Alan David Ramirez Noriega: Associate Researcher
-- Yobani Martinez Ramirez: Associate Researcher
-- Herman Geovany Ayala Zuñiga: Associate Researcher
-- Diana Gonzalez: Software Developer
-- Julio Alvarez: Software Developer
-- Juan de Dios Sapien: Software Developer
-- Sebastian Vega: Software Developer
-- Christian Armenta: Software Developer
+- Manuel de Jesus Rodriguez Guerrero: Associate researcher
+- Alan David Ramirez Noriega: Associate researcher
+- Yobani Martinez Ramirez: Associate researcher
+- Herman Geovany Ayala Zuñiga: Associate researcher
+- Diana Gonzalez: Software developer
+- Julio Alvarez: Software developer
+- Juan de Dios Sapien: Software developer
+- Sebastian Vega: Software developer
+- Christian Armenta: Software developer
 
